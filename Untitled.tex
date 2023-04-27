@@ -1,0 +1,190 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Parte II},
+  pdfauthor={Matias Bajac},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Parte II}
+\author{Matias Bajac}
+\date{2023-04-14}
+
+\begin{document}
+\maketitle
+
+\[\sigma\ algebra\]
+
+\[ Def: \Omega\ conjunto\ , C\ familia\ de\ subconjuntos\ diremos\ que\ \Omega\ es\ una\ sigma\ algebra\ sii\]
+\[propiedades\]
+
+\[(i) A\ \in C\ \implies A^c\ \in C\]
+\[(ii)\ \{A_n\}\ coleccion\ numerable\ "cerrado\ bajo\ uniones\ numerables" \implies \cup_{n=1}^{\infty}\ {A_n}\ \in\ C\]
+
+\[ P(\Omega) = {\{subconjuntos\ de\ \Omega\}}\]
+\[ si\ \Omega = \{a,b,c,d\}\]
+\[C = \{\emptyset,{\{a,b}\},{\{c,d}\},{\Omega}\}\]
+
+\[ ejemplo\ 3.2\]
+
+\[ \Omega=\ \Omega^1\  \cup\ \Omega^2\ \cup\, \Omega^n\]
+
+La familia de uniones de de \(\Omega^n\) es una \(\sigma\) algebra
+
+\[C = \{\emptyset,{\Omega^1\ ,\Omega^2, \Omega^n}\}\]
+
+\[Ejemplo\ 3.3\]
+
+\[ Consideremos\ un\ conjunto\ \Omega\ arbitrario\,\ consideremos\ un\ \mathcal{A}\ la\ familia\ de\ conjuntos\ A\ \subset\ \Omega\ tales\ que\ el\ elemento\\ A\ es\]
+\[numerable,\  o\  que\ su\ complemento\ es\ numerable.\ Entonces\ \mathcal{A}\ es\ \sigma\ algebra\]
+\[ Si\ A\ \in\ \mathcal{A}\ \implies\ A^c\ \in\ \mathcal{A}\]
+
+\[ si\ tenemos\  A_1\ numerable\ \implies\ A_1^c\ no\ numerable.\]
+\[ Por Axioma\ 2\ \cup_{n=1}^{\infty} \ A_n^c\ \in\ \mathcal{A} = \cap_{n=1}^{\infty}\ A_n^c\ \subseteq\ A_1^c\]
+\[ Entonces\ \mathcal{A}\ es\ \sigma\ algebra\] \[ ejemplo\ 3.4\]
+
+\[ Observar\ que\ si\ \mathcal{A_\alpha}\ es\ una\ coleccion\ arbitraria\ de\ \sigma\ algebra\ en\ \Omega\, entonces\ \cap_{\alpha}\mathcal{A_\alpha}\ es\ tambien\ una\ \sigma\ algebra\]
+\emph{Dem}: requiere probar cada uno de los tres axiomas.
+
+Axioma 1: por hipótesis, \(\mathcal{A}_{\alpha}\) es \(\sigma\)-álgebra
+\(\forall \alpha \in I \Rightarrow\) por axioma 1,
+\(\Omega \in \mathcal{A}_{\alpha} \forall \alpha \in I \Rightarrow\) por
+definición de intersección,
+\(\Omega \in \bigcap\limits_{\alpha \in I} \mathcal{A}_{\alpha}\).
+
+Axioma 2: si
+\(A \in \bigcap\limits_{\alpha \in I} \mathcal{A}_{\alpha} \Rightarrow\)
+por definición de intersección,
+\(A \in \mathcal{A}_{\alpha} \forall \alpha \in I\). A su vez, si
+\(A \in \mathcal{A}_{\alpha} \forall \alpha \in I \Rightarrow\) por
+axioma 2,
+\(A^c \in \mathcal{A}_{\alpha} \forall \alpha \in I \Rightarrow\) por
+definición de intersección,
+\(A^c \in \bigcap\limits_{\alpha \in I} \mathcal{A}_{\alpha}\).
+
+Axioma 3: si
+\(\{A_n\}_{n \in \mathbb{N}} \in \bigcap\limits_{\alpha \in I} \mathcal{A}_{\alpha} \Rightarrow\)
+por definición de intersección,
+\(\{A_n\}_{n \in \mathbb{N}} \subset \mathcal{A}_{\alpha} \forall \alpha \in I\).
+Luego, si
+\(\{A_n\}_{n \in \mathbb{N}} \subset \mathcal{A}_{\alpha} \forall \alpha \in I \Rightarrow\)
+por definición de unión,
+\(\{A_n\}_{n \in \mathbb{N}} \in \bigcup\limits_{\alpha \in I} \mathcal{A}_{\alpha}\).
+
+\hypertarget{sigma-algebra-de-borel}{%
+\section{sigma algebra de borel}\label{sigma-algebra-de-borel}}
+
+\(B\mathcal(R)\) = \(\cap_{\alpha}\mathcal{A_{\alpha}}\),
+\(\sigma - algebra\) siendo que~\(I\subset\mathcal{A_{\alpha}}\)
+
+siendo que I = \{(a,b) : \(a,b \in \mathcal(R)\)\} , a \textless{} b\}
+
+\[ ejemplo 3.7\]
+
+La \(\sigma algebra\) de Borel tambien puede ser obtenida si cambiamos
+la familia I por la famiuliad e intervalos semi abiertos (a,b{]} o
+intervalos cerradas {[}a,b{]} o intervalos mas generales tipo
+\((-\infty,b)\) \((\infty,b]\), variando a y b para todo R con a
+\textless{} b. Basta probar que cada uno de estos nuevos intervalos
+puede ser formado por elementos de \(B\mathcal(R)\)
+
+Por ejemplo, en el ejercicio anterior, (0,1{]} =
+\$\cup\_\{n\textgreater1\}~(0,1+1/n) \$ y por lo tanto
+\((0,1] \in \mathcal{B}{\mathcal(R)}\). Tambien estan los conjuntos de
+un elemento \{2\} \(\in \mathcal{B}{\mathcal(R)}\)
+
+por ejemplo, en el ejercicio \((-\infty,1]\) = \(\cup_{n>1}\ (-n,1)\)
+
+\hypertarget{teoria-de-la-medida}{%
+\section{Teoria de la Medida}\label{teoria-de-la-medida}}
+
+Un espacio \emph{medible} es un par \((\Omega,\mathcal{A})\) donde
+\(\Omega\) es un conjunto, y \(\mathcal{A}\) es una \(\sigma\) algebra
+de sobconjuntos de \(\Omega\)
+
+Una medida es un espacio medible \((\Omega,\mathcal{A})\) es una funcion
+\(\mu:\ \mathcal{A} \implies\ \mathcal{R}\) que se cumplas las
+siguientes propiedades
+
+\begin{enumerate}
+\def\labelenumi{(\roman{enumi})}
+\item
+  \(\mu(A)\ \geq \mu(\emptyset)\), para todo \(A \in\ \mathcal{A}\)
+\item
+  \(A_{i}\) es una coleccion numerable y disjunta fe mienbros de
+  \(mathcal{A}\), entonces \(\mu(\cup_{i}A_i)=\sum_{i}\mu(A_i)\)
+\end{enumerate}
+
+A la propiedad (ii) se la conoce como propiedad \(\sigma\) aditiva
+
+si \(\mu(\Omega) = 1\), decimos que \(\mu\) es una medida de
+probabilidad
+
+Propiedades
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  \(A \in \mathcal{A} \implies\ P(A^c)=1-P(A)\)
+\item
+  Si A
+\end{enumerate}
+
+\end{document}
