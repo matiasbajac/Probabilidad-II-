@@ -1,0 +1,109 @@
+---
+title: "Independencia"
+author: "Matias Bajac"
+date: '2023-04-04'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ $x_1$ , $x_2$, ..., $x_n$ en ($\Omega$, $\color{black}{P}$) diremos que son independientes sii 
+ 
+ \{$X_1$=$x_1$\},..., {$X_n$=$x_n$} son independientes para cualquier $x_1,\ldots,x_n\in\mathbb{R}$
+ 
+ 
+ 
+
+ 
+
+$\diamondsuit$  **Demostracion 2.1.5**
+
+Probar que   $x_1$ , $x_2$, ..., $x_n$ son independientes sii \{$X_1$=$B_1$\},..., \{$X_n$=$B_n$\}
+
+son independientes para todo $B_1$,..., $B_n$ subconjuntos de $\mathbb{R}$
+
+$B_i$ = {$x_i$}
+
+comenzar probando que  {$x_1\in\color{black}B_1$} {$x_2\in\color{black}B_2$} 
+
+
+$B_1$ $\cap$ $I_n$$X_1$ = {$x_1$,$x_2$,$x_3$} 
+
+$B_2$ $\cap$ $I_n$$X_2$ = {$y_1$,$y_2$}
+
+P({$x_1\in\color{black}B_1$} {$x_2\in\color{black}B_2$} =
+
+P($x_1\in\color{black}B_1$)$x_2\in\color{black}B_2$)
+
+
+
+{$x_1\in\color{black}B_1$} = {$X_1$ = $x_1$} $\cup$ {$X_1$ = $x_2$} $\cup$ {$X_1$ = $x_3$} $\cap$
+
+{$x_1\in\color{black}B_1$} $\cap$ {$x_2\in\color{black}B_2$}}
+
+{$X_1$ = $x_1$} $\cap$ {$X_2$ = $y_1$} $\cup$ {$X_1$ = $x_1$} $\cap$ {$X_2$ = $y_2$} $\cup$ {$X_1$ = $x_2$} $\cap$ {$X_2$ = $y_1$} $\cup$ {$X_1$ = $x_3$} $\cap$ {$X_2$ = $y_1$}  $\cup$  {$X_1$ = $x_3$} $\cap$ {$X_2$ = $y_2$} 
+
+$\diamondsuit$ **Demostracion 2.1.6**
+
+
+Probar que una familia de eventos es independiente si lo es su familia de funciones indicatrices 
+
+Supongamos que tenemos ${A_i}^n$ y su funcion indicatriz ${1A_i}^n$.
+
+$$
+1\{ A \}(\omega) =
+\begin{cases}
+1, & \text{si } \omega \in A \\
+0, & \text{si } \omega \notin A
+\end{cases}
+$$
+
+P($A_1$ $\cap$ $A_2$ $\cap$ $A_3$ $\cap$ ,..., $A_n$)
+
+Ahora, si asumimos que las funciones indicatrices ${1A_i}^n$ 
+son independientes, entonces podemos separar el valor esperado en un producto de valores esperados:
+
+
+
+Expresandolo en relacion a sus funciones indicatrices..
+
+
+
+P($A_1$ $\cap$ $A_2$ $\cap$ $A_3$ $\cap$ ,..., $A_n$) = $E[1_{A_1}(\omega)]$$E[1_{A_2}(\omega)]$$E[1_{A_3}(\omega)]$ $E[1_{A_i}(\omega)]$ = P($A_1$) $\cap$ P($A_2$) $\cap$ P($A_3$),...., $\cap$ P($A_i$)
+
+
+
+$\diamondsuit$**Demostracion 2.1.8**
+
+sean X E e Y v.a independientes. Entonces 
+
+  
+  $$E(XY) = E(X)E (Y)$$
+
+
+$$X = \sum_{i=1}x_i 1_{{x=x_i}}$$
+$$Y = \sum_{i=1}y_i 1_{{y=y_i}}$$
+$$X.Y = \sum\sum{x_iy_i}1_{{X=x_i}}1_{{Y=y_i}}$$
+$$=\sum\sum{x_iy_i} E [1_{X=x_i}]\cap{[1_{Y=y_i}}]$$
+
+$$=\sum\sum{x_iy_i}  [P(_{X=x_i})]{[P({Y=y_i}})]$$
+$$=\sum{x_i}P(X=x_i)\sum{y_i}P(Y=y_i)$$
